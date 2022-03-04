@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0b4d118f-77e9-4468-afcb-10f73fb4da62": {
+      "ProjectGuid": "0b4d118f-77e9-4468-afcb-10f73fb4da62",
+      "DisplayName": "CursoOnline.DominioTest",
+      "ColorIndex": 0
+    },
+    "61e9bc42-facb-4e7a-9b72-feee0a1e19a6": {
+      "ProjectGuid": "61e9bc42-facb-4e7a-9b72-feee0a1e19a6",
+      "DisplayName": "CursoOnline.Dominio",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
