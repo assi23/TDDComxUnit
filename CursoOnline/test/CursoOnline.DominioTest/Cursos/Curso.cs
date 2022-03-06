@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CursoOnline.DominioTest.Cursos
 {
@@ -6,6 +7,15 @@ namespace CursoOnline.DominioTest.Cursos
     {
         public Curso(string nome, double cargaHoraria, PublicoAlvoEnum publicoAlvo, decimal valor)
         {
+            if (string.IsNullOrEmpty(nome))
+                throw new ArgumentException("Nome Inválido");
+
+            if (string.IsNullOrEmpty(nome))
+                throw new ArgumentException("Nome Inválido");
+
+            if (string.IsNullOrEmpty(nome))
+                throw new ArgumentException("Nome Inválido");
+
             Nome = nome;
             CargaHoraria = cargaHoraria;
             PublicoAlvo = publicoAlvo;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fC33Ib90ZwDnzG7JUfGRMvLGG0tmkpl5WswHDHFhcppk99hVHF0SAMOdnRqXL43lRGHCtXwweNqNd6U7Ui8M+Q==",
+  "dgSpecHash": "2tiRApbbSlzxecGcmApinGRCNNEj3our0KayeBe0596XyVwB1phWi3WmWcyXGNtIABA5XIWKiWTJ7EiSwbC5Ew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\119956\\Downloads\\Estudos\\CursoOnline\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\Usuário\\Documents\\Solutions\\TDDComxUnit\\CursoOnline\\src\\CursoOnline.Dominio\\CursoOnline.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

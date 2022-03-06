@@ -1,4 +1,5 @@
 ﻿using ExpectedObjects;
+using System;
 using Xunit;
 
 namespace CursoOnline.DominioTest.Cursos
@@ -41,6 +42,61 @@ namespace CursoOnline.DominioTest.Cursos
 
             //Assert
             cursoEsperado.ToExpectedObject().ShouldMatch(curso);
+        }
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void VerificarSeONomeEInvalido(string nomeInvalidado)
+        {
+            var cursoEsperado = new
+            {
+                Nome = nomeInvalidado,
+                CargaHoraria = (double)80,
+                PublicoAlvo = PublicoAlvoEnum.Universitario,
+                Valor = (decimal)950
+            };
+
+            var message = Assert.Throws<ArgumentException>(()=>
+            new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)).Message;
+            Assert.Equal("Nome Inválido", message);
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        [InlineData(-100)]
+        public void VerificarSeACargaHorariaEMenorQue1(double cargaHorariaInvalida)
+        {
+            var cursoEsperado = new
+            {
+                Nome = "TI",
+                CargaHoraria = cargaHorariaInvalida,
+                PublicoAlvo = PublicoAlvoEnum.Universitario,
+                Valor = (decimal)950
+            };
+
+            var message = Assert.Throws<ArgumentException>(() =>
+            new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)).Message;
+            Assert.Equal("Carga horária Inválido", message);
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        [InlineData(-100)]
+        public void VerificarSeOValorEMenorQue1(decimal valorInvalido)
+        {
+            var cursoEsperado = new
+            {
+                Nome = "TI",
+                CargaHoraria = (double)80,
+                PublicoAlvo = PublicoAlvoEnum.Universitario,
+                Valor = valorInvalido
+            };
+
+            var message = Assert.Throws<ArgumentException>(() =>
+            new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)).Message;
+            Assert.Equal("valor Inválido", message);
         }
     }
 }
