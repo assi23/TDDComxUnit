@@ -1,1 +1,1 @@
-Curso de TDD com xUnitec# .Net Core
+Curso de TDD com xUnit c# .Net Core
