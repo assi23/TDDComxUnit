@@ -10,11 +10,11 @@ namespace CursoOnline.DominioTest.Cursos
             if (string.IsNullOrEmpty(nome))
                 throw new ArgumentException("Nome Inválido");
 
-            if (string.IsNullOrEmpty(nome))
-                throw new ArgumentException("Nome Inválido");
+            if (cargaHoraria < 1)
+                throw new ArgumentException("Carga horária Inválido");
 
-            if (string.IsNullOrEmpty(nome))
-                throw new ArgumentException("Nome Inválido");
+            if (valor < 1)
+                throw new ArgumentException("Valor Inválido");
 
             Nome = nome;
             CargaHoraria = cargaHoraria;

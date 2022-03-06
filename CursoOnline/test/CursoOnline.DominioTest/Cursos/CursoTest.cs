@@ -96,7 +96,7 @@ namespace CursoOnline.DominioTest.Cursos
 
             var message = Assert.Throws<ArgumentException>(() =>
             new Curso(cursoEsperado.Nome, cursoEsperado.CargaHoraria, cursoEsperado.PublicoAlvo, cursoEsperado.Valor)).Message;
-            Assert.Equal("valor Inválido", message);
+            Assert.Equal("Valor Inválido", message);
         }
     }
 }
